@@ -46,7 +46,7 @@ npm or Yarn
 Hardhat or Foundry (for contract compilation and testing)
 Setup
 Clone the repository:
-git clone [https://github.com/YourUsername/DAO3.0-Project.git](https://github.com/YourUsername/DAO3.0-Project.git)
+git clone [https://github.com/YourUsername/DAO3.0-Project.git](https://github.com/Jayram2204/DAO3.0-Project.git)
 cd DAO3.0-Project
 Install dependencies:
 npm install
