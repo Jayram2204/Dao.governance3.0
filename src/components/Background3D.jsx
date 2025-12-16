@@ -9,12 +9,16 @@ const ParticleField = (props) => {
   const sphere = random.inSphere(new Float32Array(8000 * 3), { radius: 2.0 });
    
   useFrame((state, delta) => {
-    // Slow, hypnotic rotation like cosmic drift
-    ref.current.rotation.x -= delta / 15;
-    ref.current.rotation.y -= delta / 20;
+    // Slower, more deliberate rotation with ease-in-out timing (40% slower)
+    const time = state.clock.elapsedTime;
+    const easeInOut = (t) => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    const smoothFactor = easeInOut((Math.sin(time * 0.1) + 1) / 2);
     
-    // Add subtle pulsing like distant stars
-    const pulse = Math.sin(state.clock.elapsedTime * 0.5) * 0.1 + 0.9;
+    ref.current.rotation.x -= (delta / 25) * (0.6 + 0.4 * smoothFactor); // 40% slower base speed
+    ref.current.rotation.y -= (delta / 33) * (0.6 + 0.4 * smoothFactor); // 40% slower base speed
+    
+    // Add subtle pulsing like distant stars with smoother timing
+    const pulse = Math.sin(state.clock.elapsedTime * 0.3) * 0.08 + 0.92;
     ref.current.scale.setScalar(pulse);
   });
    
@@ -40,8 +44,13 @@ const NebulaField = (props) => {
   const sphere = random.inSphere(new Float32Array(3000 * 3), { radius: 1.2 });
    
   useFrame((state, delta) => {
-    ref.current.rotation.x += delta / 25;
-    ref.current.rotation.y += delta / 30;
+    // Slower nebula rotation with complementary ease-in-out timing (40% slower)
+    const time = state.clock.elapsedTime;
+    const easeInOut = (t) => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    const smoothFactor = easeInOut((Math.sin(time * 0.08 + Math.PI) + 1) / 2); // Offset phase for variety
+    
+    ref.current.rotation.x += (delta / 42) * (0.6 + 0.4 * smoothFactor); // 40% slower
+    ref.current.rotation.y += (delta / 50) * (0.6 + 0.4 * smoothFactor); // 40% slower
   });
    
   return (
@@ -83,7 +92,7 @@ const Background3D = () => {
         </Float>
 
         {/* Stars */}
-        <Stars radius={100} depth={50} count={10000} factor={4} saturation={0} fade speed={1} />
+        <Stars radius={100} depth={50} count={10000} factor={4} saturation={0} fade speed={0.6} />
       </Canvas>
     </div>
   );

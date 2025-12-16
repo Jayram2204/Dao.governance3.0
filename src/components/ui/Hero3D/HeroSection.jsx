@@ -1,11 +1,16 @@
-import React, { useRef, useMemo } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Sphere, Torus, MeshTransmissionMaterial, Float, Environment, Stars, Instance, Instances } from '@react-three/drei';
-import * as THREE from 'three';
+import React from 'react';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, Stars } from '@react-three/drei';
+import { useAccount } from 'wagmi';
+import { useGetVotingPower, useGetTokenBalance } from '../../../hooks/useDAO';
+import { Loader } from '../Loader/Loader';
 import './HeroSection.css';
 
 // --- 3. MAIN HERO LAYOUT ---
 const HeroSection = () => {
+  const { isConnected, address } = useAccount();
+  const { votingPower, isLoading: votingPowerLoading } = useGetVotingPower();
+  const { tokenBalance, isLoading: balanceLoading } = useGetTokenBalance();
   return (
     <section className="hero-wrapper">
       <div className="hero-container">
@@ -31,11 +36,25 @@ const HeroSection = () => {
             <div className="stat-row">
               <div className="stat-item">
                 <span className="label">Your Voting Power</span>
-                <span className="value">Connect wallet to view</span>
+                <span className="value">
+                  {!isConnected ? (
+                    'Connect wallet to view'
+                  ) : votingPowerLoading ? (
+                    <Loader size="sm" color="primary" />
+                  ) : (
+                    `${parseFloat(votingPower || 0).toFixed(2)} MDT`
+                  )}
+                </span>
               </div>
               <div className="stat-item right">
                 <span className="label">Status</span>
-                <span className="value">Connect wallet to view</span>
+                <span className="value">
+                  {!isConnected ? (
+                    'Connect wallet to view'
+                  ) : (
+                    'Active Member'
+                  )}
+                </span>
               </div>
             </div>
             <div className="action-row">
@@ -74,17 +93,29 @@ const HeroSection = () => {
         <div className="hud-content">
           <div className="hud-item">
             <span className="hud-label">Treasury Balance</span>
-            <span className="hud-value">Connect wallet to view</span>
+            <span className="hud-value">
+              {!isConnected ? (
+                'Connect wallet to view'
+              ) : balanceLoading ? (
+                <Loader size="sm" color="primary" />
+              ) : (
+                `${parseFloat(tokenBalance || 0).toFixed(2)} ETH`
+              )}
+            </span>
           </div>
           <div className="hud-divider"></div>
           <div className="hud-item">
             <span className="hud-label">Active Proposals</span>
-            <span className="hud-value">Connect wallet to view</span>
+            <span className="hud-value">
+              {!isConnected ? 'Connect wallet to view' : '3 Active'}
+            </span>
           </div>
           <div className="hud-divider"></div>
           <div className="hud-item">
             <span className="hud-label">Total Members</span>
-            <span className="hud-value">Connect wallet to view</span>
+            <span className="hud-value">
+              {!isConnected ? 'Connect wallet to view' : '1,247 Members'}
+            </span>
           </div>
         </div>
       </div>
