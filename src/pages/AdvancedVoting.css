@@ -1,0 +1,266 @@
+/* Advanced Voting Page Styles */
+.advanced-voting-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-title {
+  margin: 0 0 1rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-teal));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-subtitle {
+  margin: 0;
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.view-selector {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.view-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--glass-bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.5rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.view-button:hover {
+  background: var(--glass-bg-primary);
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+}
+
+.view-button.active {
+  background: var(--accent-primary);
+  color: white;
+  border-color: var(--accent-primary);
+}
+
+.content-area {
+  margin-bottom: 3rem;
+}
+
+/* Voting Section */
+.voting-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.strategy-selector {
+  text-align: center;
+}
+
+.section-title {
+  margin: 0 0 2rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.strategy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.strategy-card {
+  padding: 1.5rem;
+  background: var(--glass-bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.strategy-card:hover {
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.strategy-card.active {
+  border-color: var(--accent-primary);
+  background: rgba(139, 92, 246, 0.05);
+}
+
+.strategy-icon {
+  font-size: 2rem;
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+}
+
+.strategy-name {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.strategy-description {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.voting-interface {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.voting-placeholder {
+  padding: 3rem;
+  text-align: center;
+}
+
+.voting-placeholder h3 {
+  margin: 0 0 1rem 0;
+  color: var(--text-primary);
+}
+
+.voting-placeholder p {
+  margin: 0 0 1rem 0;
+  color: var(--text-secondary);
+}
+
+/* Feature Overview */
+.feature-overview {
+  margin-top: 4rem;
+}
+
+.overview-card {
+  padding: 2rem;
+}
+
+.overview-title {
+  margin: 0 0 2rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--glass-bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.feature-item:hover {
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  color: var(--accent-primary);
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.feature-content h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.feature-content p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .advanced-voting-page {
+    padding: 1rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+  }
+
+  .view-selector {
+    justify-content: center;
+  }
+
+  .strategy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature-icon {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .view-selector {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .view-button {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+
+  .feature-item {
+    padding: 1rem;
+  }
+}

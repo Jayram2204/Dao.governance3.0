@@ -1,0 +1,357 @@
+/* Quadratic Funding Styles */
+.quadratic-funding-card {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.funding-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.funding-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.funding-icon {
+  color: var(--accent-primary);
+}
+
+.strategy-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--glass-bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.funding-power-display {
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.power-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--glass-bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.5rem;
+}
+
+.power-label {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.power-value {
+  font-weight: 600;
+  color: var(--accent-primary);
+  font-family: 'Courier New', monospace;
+}
+
+.projects-list {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-item {
+  padding: 1.5rem;
+  background: var(--glass-bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.5rem;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project-name {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.project-description {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.project-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 200px;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.stat-label {
+  color: var(--text-secondary);
+}
+
+.stat-value {
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+}
+
+.stat-value.matching {
+  color: var(--accent-teal);
+}
+
+.stat-value.total {
+  color: var(--accent-primary);
+  font-size: 1rem;
+}
+
+.contribution-control {
+  border-top: 1px solid var(--glass-border);
+  padding-top: 1rem;
+}
+
+.contribution-label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.contribution-slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--glass-bg-primary);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin-bottom: 1rem;
+}
+
+.contribution-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.contribution-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.slider-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quick-amount {
+  padding: 0.5rem 1rem;
+  background: var(--glass-bg-primary);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.375rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quick-amount:hover {
+  background: var(--accent-primary);
+  color: white;
+  border-color: var(--accent-primary);
+}
+
+.amount-input {
+  flex: 1;
+  padding: 0.5rem;
+  background: var(--glass-bg-primary);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.375rem;
+  color: var(--text-primary);
+  text-align: center;
+  font-family: 'Courier New', monospace;
+}
+
+.amount-input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+}
+
+.funding-summary {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--glass-bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.5rem;
+}
+
+.summary-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+.summary-label {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.summary-value {
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+  color: var(--accent-primary);
+}
+
+.summary-value.matching {
+  color: var(--accent-teal);
+}
+
+.summary-value.total {
+  color: var(--accent-primary);
+  font-size: 1.1rem;
+}
+
+.quadratic-explanation {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: var(--glass-bg-primary);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.5rem;
+}
+
+.info-icon {
+  color: var(--accent-primary);
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.explanation-content p {
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.explanation-content ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.explanation-content li {
+  margin-bottom: 0.25rem;
+}
+
+.funding-actions {
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .quadratic-funding-card {
+    padding: 1.5rem;
+  }
+
+  .funding-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .funding-power-display {
+    grid-template-columns: 1fr;
+  }
+
+  .project-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-stats {
+    min-width: auto;
+  }
+
+  .slider-controls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .amount-input {
+    order: -1;
+  }
+
+  .quadratic-explanation {
+    flex-direction: column;
+    text-align: center;
+  }
+}

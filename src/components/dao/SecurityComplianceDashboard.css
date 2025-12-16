@@ -1,0 +1,476 @@
+/* Security Compliance Dashboard Styles */
+.security-dashboard {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.dashboard-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.dashboard-icon {
+  color: var(--accent-primary);
+}
+
+.security-status {
+  display: flex;
+  align-items: center;
+}
+
+.status-indicator {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-indicator.compliant {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid var(--accent-teal);
+  color: var(--accent-teal);
+}
+
+.status-indicator.non-compliant {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--accent-red);
+  color: var(--accent-red);
+}
+
+.dashboard-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.tab-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--glass-bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-bottom: none;
+  border-radius: 0.5rem 0.5rem 0 0;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.tab-button:hover {
+  background: var(--glass-bg-primary);
+  color: var(--text-primary);
+}
+
+.tab-button.active {
+  background: var(--accent-primary);
+  color: white;
+  border-color: var(--accent-primary);
+}
+
+.dashboard-content {
+  min-height: 400px;
+}
+
+/* Overview Tab */
+.overview-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.metric-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--glass-bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.5rem;
+}
+
+.metric-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--glass-bg-primary);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--accent-primary);
+}
+
+.metric-info {
+  flex: 1;
+}
+
+.metric-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.metric-value {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  font-family: 'Courier New', monospace;
+}
+
+.metric-value.high {
+  color: var(--accent-teal);
+}
+
+.metric-value.medium {
+  color: var(--accent-primary);
+}
+
+.metric-value.low {
+  color: var(--accent-red);
+}
+
+.metric-description {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.recent-activity {
+  padding: 1.5rem;
+  background: var(--glass-bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.5rem;
+}
+
+.activity-title {
+  margin: 0 0 1rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: var(--glass-bg-primary);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.375rem;
+}
+
+.activity-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.activity-action {
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: capitalize;
+}
+
+.activity-address {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-family: 'Courier New', monospace;
+}
+
+.activity-time {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+/* Audit Tab */
+.audit-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.audit-controls {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.audit-logs {
+  padding: 1.5rem;
+  background: var(--glass-bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.5rem;
+}
+
+.logs-title {
+  margin: 0 0 1rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.logs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.log-entry {
+  padding: 1rem;
+  background: var(--glass-bg-primary);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.375rem;
+}
+
+.log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.log-action {
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: capitalize;
+}
+
+.log-timestamp {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.log-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.log-address,
+.log-info {
+  font-family: 'Courier New', monospace;
+}
+
+/* Compliance Tab */
+.compliance-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.compliance-status {
+  padding: 1.5rem;
+  background: var(--glass-bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.5rem;
+}
+
+.status-title {
+  margin: 0 0 1rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.compliance-level {
+  display: flex;
+  align-items: center;
+}
+
+.level-indicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+.level-indicator.high {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid var(--accent-teal);
+  color: var(--accent-teal);
+}
+
+.level-indicator.medium {
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.level-indicator.low {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--accent-red);
+  color: var(--accent-red);
+}
+
+.compliance-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Insurance Tab */
+.insurance-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.insurance-overview {
+  padding: 1.5rem;
+  background: var(--glass-bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.5rem;
+}
+
+.insurance-title {
+  margin: 0 0 1rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.insurance-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.insurance-metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.insurance-metric:last-child {
+  border-bottom: none;
+}
+
+.metric-label {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.metric-value {
+  font-weight: 600;
+  color: var(--accent-primary);
+  font-family: 'Courier New', monospace;
+}
+
+.insurance-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Security Notice */
+.security-notice {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--glass-bg-primary);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.5rem;
+}
+
+.notice-icon {
+  color: var(--accent-primary);
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.notice-content p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .security-dashboard {
+    padding: 0 1rem;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .dashboard-tabs {
+    flex-wrap: wrap;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .activity-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .log-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .compliance-actions,
+  .insurance-actions {
+    flex-direction: column;
+  }
+
+  .security-notice {
+    flex-direction: column;
+    text-align: center;
+  }
+}

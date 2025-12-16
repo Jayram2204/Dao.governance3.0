@@ -1,0 +1,18 @@
+.pie-chart-container {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.pie-chart-container .recharts-legend-wrapper {
+  color: #8D96A0 !important;
+}
+
+.pie-chart-container .recharts-legend-item-text {
+  color: #8D96A0 !important;
+}
+
+.pie-chart-container .recharts-pie-label-text {
+  fill: #F8F8F8;
+  font-size: 0.875rem;
+  font-weight: 600;
+}

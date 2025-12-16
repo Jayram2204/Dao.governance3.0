@@ -1,0 +1,26 @@
+/*
+ * FUTURIST TRUST PALETTE
+ * We define all our colors here as CSS variables.
+ * This file should be imported into index.css.
+ */
+
+:root {
+  /* Backgrounds */
+  --bg-primary: #0D1117; /* 🌌 Dark Matter */
+  --bg-secondary: #161B22; /* 🌑 Slate */
+
+  /* Brand Colors */
+  --brand-blue: #3B82F6; /* 🌀 Governance Blue */
+  --brand-violet: #8B5CF6; /* 💜 Web3 Violet */
+
+  /* Accents */
+  --accent-teal: #10B981; /* 💹 Neon Teal (for "Yes" / CTA) */
+  --accent-red: #EF4444; /* 🚫 Warning Red (for "No" / Danger) */
+
+  /* Text */
+  --text-primary: #F8F8F8; /* 📄 Off-White */
+  --text-secondary: #8D96A0; /* 🖱️ Muted Grey */
+
+  /* Borders */
+  --border-color: #30363d;
+}

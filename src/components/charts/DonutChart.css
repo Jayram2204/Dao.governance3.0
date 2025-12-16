@@ -1,0 +1,35 @@
+.donut-chart-container {
+  width: 100%;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.donut-chart-container .recharts-legend-wrapper {
+  color: #8D96A0 !important;
+}
+
+.donut-chart-container .recharts-legend-item-text {
+  color: #8D96A0 !important;
+}
+
+.donut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.donut-center-text {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #F8F8F8;
+  line-height: 1;
+}
+
+.donut-center-subtext {
+  font-size: 0.875rem;
+  color: #8D96A0;
+  margin-top: 0.25rem;
+}

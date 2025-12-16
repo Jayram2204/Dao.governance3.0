@@ -1,0 +1,12 @@
+.line-chart-container {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.line-chart-container .recharts-legend-wrapper {
+  color: #8D96A0 !important;
+}
+
+.line-chart-container .recharts-legend-item-text {
+  color: #8D96A0 !important;
+}

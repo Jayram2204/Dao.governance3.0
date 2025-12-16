@@ -1,0 +1,21 @@
+.treasury-overview-card {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.chart-loading-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}

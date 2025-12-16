@@ -1,0 +1,133 @@
+.voting-page-container {
+  padding: 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 3rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.voting-summary-card {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 3rem;
+  line-height: 1.6;
+}
+
+.summary-title {
+  font-size: 1.75rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.voting-power-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--brand-blue);
+  margin-bottom: 0.5rem;
+}
+
+.summary-text {
+  max-width: 500px;
+  margin: 0.5rem auto 1.5rem auto;
+  line-height: 1.6;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-accent-red {
+  color: var(--accent-red);
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.delegate-button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.delegate-input-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.delegate-address-input {
+  flex-grow: 1;
+  max-width: 400px;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.delegate-address-input:focus {
+  border-color: var(--brand-blue);
+}
+
+.delegate-address-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.delegate-feedback {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--bg-primary);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.delegate-feedback p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.proposals-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.proposals-header .section-title {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .proposals-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  
+  .proposals-header .section-title {
+    text-align: center;
+  }
+}

@@ -1,0 +1,74 @@
+.ui-button {
+  padding: 0.875rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  line-height: 1.2;
+}
+
+/* Default / Neutral Button */
+.ui-button--default {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+.ui-button--default:hover:not(:disabled) {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+/* Primary Button (for major actions) */
+.ui-button--primary {
+  background-color: var(--brand-blue);
+  color: var(--text-primary);
+}
+.ui-button--primary:hover:not(:disabled) {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+/* Secondary Button (for less critical actions) */
+.ui-button--secondary {
+  background-color: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+.ui-button--secondary:hover:not(:disabled) {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--text-secondary);
+}
+
+/* Accent Teal Button (for positive actions) */
+.ui-button--accent-teal {
+  background-color: var(--accent-teal);
+  color: #000;
+}
+.ui-button--accent-teal:hover:not(:disabled) {
+  background-color: #0ca97e;
+  transform: translateY(-1px);
+}
+
+/* Accent Red Button (for destructive actions) */
+.ui-button--accent-red {
+  background-color: var(--accent-red);
+  color: var(--text-primary);
+}
+.ui-button--accent-red:hover:not(:disabled) {
+  background-color: #dc2626;
+  transform: translateY(-1px);
+}
+
+.ui-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: grayscale(1);
+}

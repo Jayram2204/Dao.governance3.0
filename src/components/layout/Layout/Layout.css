@@ -1,0 +1,39 @@
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  background: transparent !important; /* Let 3D background show through */
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  background: transparent !important; /* Let 3D background show through */
+}
+
+.main-content * {
+  color: inherit;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4 {
+  color: #ffffff !important;
+}
+
+.main-content p,
+.main-content span,
+.main-content div {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 0;
+  }
+}

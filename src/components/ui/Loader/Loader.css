@@ -1,0 +1,36 @@
+/* Spinner animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.ui-loader {
+  border: 3px solid var(--border-color);
+  border-top: 3px solid var(--brand-blue);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Sizes */
+.ui-loader--sm {
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+}
+
+.ui-loader--md {
+  width: 24px;
+  height: 24px;
+}
+
+.ui-loader--lg {
+  width: 36px;
+  height: 36px;
+  border-width: 4px;
+}
+
+/* Colors */
+.ui-loader--primary { border-top-color: var(--brand-blue); }
+.ui-loader--secondary { border-top-color: var(--brand-violet); }
+.ui-loader--accent-teal { border-top-color: var(--accent-teal); }
+.ui-loader--text-primary { border-top-color: var(--text-primary); }
